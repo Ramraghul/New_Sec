@@ -7,11 +7,19 @@ import TopBar from './TopBar'
 function Portal() {
     return (
         <>
-            <div className='nav-fixed'>
-            <SideBar />
-                <TopBar />
-                
-                <Outlet />
+            <div id="page-top">
+                <div id="wrapper">
+                    <SideBar/>
+                    <div id="content-wrapper" className="d-flex flex-column">
+                        <div id="content">
+                            <TopBar/>
+                            <div className="container-fluid">
+                                <Outlet />
+                            </div>
+                        </div>
+                        {/* <Footer></Footer> */}
+                    </div>
+                </div>
             </div>
         </>
     )
